@@ -19,7 +19,7 @@ I have many other implementations of this server:
 - [Python Django + Rest Framework](https://github.com/melardev/DjangoRestFrameworkPaginatedCrud)
 - [Python Flask](https://github.com/melardev/FlaskApiPaginatedCrud)
 - [AspNetCore](https://github.com/melardev/AspNetCoreApiPaginatedCrud)
-
+- [Asp Net Web Api 2](https://github.com/melardev/WebApiPaginatedAsyncCrud)
 # Understanding the project
 I have controllers, services that deal with the database, Dtos that filter which thing is returned or not as response.
 The controllers all return HttpResponseMessage, which is somewhat the old way, which means this code is more portable,

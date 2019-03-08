@@ -18,7 +18,7 @@
     + [Client side implementations](#client-side-implementations-2)
       - [The next come are](#the-next-come-are-3)
 - [Understanding the project](#understanding-the-project)
-- [Follow me](#follow-me)
+- [Social media links](#social-media-links)
 - [Resources](#resources)
     
 # Introduction
@@ -171,8 +171,7 @@ The next come are:
 - Go with Mux
 - Jersey
 - Elixir
-
-# Follow me
+# Social media links
 - [Youtube Channel](https://youtube.com/melardev)
 - [Blog](http://melardev.com)
 - [Twitter](https://twitter.com/@melardev)

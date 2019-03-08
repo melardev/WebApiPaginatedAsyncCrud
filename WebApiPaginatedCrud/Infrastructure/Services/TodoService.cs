@@ -112,7 +112,8 @@ namespace WebApiPaginatedCrud.Infrastructure.Services
             {
                 Todo todoFromDb = dbContext.Todos.First(t => t.Id == id);
                 todoFromDb.Title = todoFromUserInput.Title;
-                todoFromDb.Description = todoFromUserInput.Description;
+                if (todoFromUserInput.Description != null)
+                    todoFromDb.Description = todoFromUserInput.Description;
                 todoFromDb.Completed = todoFromUserInput.Completed;
 
                 // Not needed, it is set in ApplicationDbContext

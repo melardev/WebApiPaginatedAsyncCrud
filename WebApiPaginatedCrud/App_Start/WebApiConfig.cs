@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -24,14 +25,11 @@ namespace WebApiPaginatedCrud
             };
              */
 
-            System.Diagnostics.Debug.WriteLine("[+] From Web Api RegisterConfig");
-            System.Diagnostics.Debug.WriteLine("==============================");
-            System.Diagnostics.Debug.WriteLine("==============================");
-            System.Diagnostics.Debug.WriteLine("==============================");
-            System.Diagnostics.Debug.WriteLine("==============================");
-            System.Diagnostics.Debug.WriteLine("==============================");
 
-            
+            config.EnableCors();
+
+            // var cors = new EnableCorsAttribute(origins: "*", headers: "*", methods: "*");
+            // config.EnableCors(cors);
 
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
                 new DefaultContractResolver()

@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using WebApiPaginatedCrud.Dtos.Responses.Todos;
 using WebApiPaginatedCrud.Entities;
@@ -16,10 +17,12 @@ using WebApiPaginatedCrud.Models;
 
 namespace WebApiPaginatedCrud.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/todos")]
     public class TodosController : ApiController
     {
-        private TodoService _todosService;
+        private readonly TodoService _todosService;
+
 
         public TodosController()
         {
@@ -56,7 +59,7 @@ namespace WebApiPaginatedCrud.Controllers
                 pageSize, result.Item1));
         }
 
-        
+
         [HttpGet]
         [Route("{id}")]
         public async Task<HttpResponseMessage> GetTodoDetails(int id)
@@ -68,7 +71,6 @@ namespace WebApiPaginatedCrud.Controllers
             {
                 return StatusCodeAndDtoWrapper.BuildNotFound("Requested todo not found");
             }
-
         }
 
 
